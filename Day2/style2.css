@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>web class</title>
+    <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+      <p>A class is a template definition of the method s and variable s in a particular kind of object . Thus, an object is a specific instance of a class; it contains real values instead of variables</p>
+        
+    </body>
+  </body>
+</html>
+
+-----------------------------------css----------------------------------------
+
+.box {
+  /*font-family: Imact, Haettenschweiler, "Arial Narrow Bold", sans-serif;*/
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 400;
+}
+p {
+  line-height: 2;
+}
