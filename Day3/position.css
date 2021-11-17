@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.selectors{
+    width: 200px;
+    height: 500px;
+    border: 1px solid red;
+    margin-left: 50px;
+}   
+.circle{
+    width: 200px;
+    height: 200px;
+    border: 1px solid green;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 5px;
+}
+.one{
+    position: absolute;
+}

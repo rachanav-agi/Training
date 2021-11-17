@@ -1,0 +1,26 @@
+h3 {
+    color: blue;
+  }
+  div h1 {
+    color: burlywood;
+  }
+  div + p {
+    color: aqua;
+  }
+  ul > li {
+    color: royalblue;
+  }
+  div ~ h1 {
+    color: blue;
+  }
+  [class="my"] {
+    color: darkcyan;
+  }
+  .one,
+  two {
+    background-color: bisque;
+  }
+  p:hover, h1:hover, a:hover {
+    background-color: yellow;
+  }
+  
