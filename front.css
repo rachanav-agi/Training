@@ -1,0 +1,26 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: lightgrey;
+    font-style:unset;
+    
+}
+.links{
+    width: 500px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    
+}
+.linkItemOne{
+    background-color: darkgrey;
+    
+   
+}
