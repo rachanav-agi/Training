@@ -1,0 +1,29 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html ',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+day="today";
+names=[
+    {
+        fName:"Rachana",
+        age:22
+    
+    },{
+        fName:"Varshitha",
+        age:21
+    },{
+        fName:"Roshini",
+        age:23
+    }
+    
+]
+}
+------------------------------------------------------------html----------------------------------------------
+<h4 *ngFor="let name of names">
+  {{name,fname}}
+  {{name,age}}
+  </h4>
