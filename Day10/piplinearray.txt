@@ -1,0 +1,32 @@
+import { Component, OnInit } from '@angular/core';
+import { NeeddataService } from './needdata.service';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent implements OnInit{
+  constructor(service:NeeddataService) {
+    this.product=service.products;
+  }
+  ngOnInit(): void {
+
+  }
+  product:any;
+}
+  
+
+
+--------------------------------------------------------------------
+import { Injectable } from '@angular/core';
+
+@Injectable({
+})
+export class NeeddataService {
+
+  constructor() { }
+  products=['Football' , 'Glooves' , 'golf']
+}
+-----------------------------------------------------------------------
+<h1>{{products[0]}}</h1>

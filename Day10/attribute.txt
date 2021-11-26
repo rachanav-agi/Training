@@ -1,0 +1,36 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  day="today";
+  textcolor="gray";
+  styleColor="newfont";
+;
+}
+
+-----------------------------------------------------------
+
+
+<h1 [ngClass]="'changeColor'">Rachana</h1>
+<h1 [ngClass]="'changeColor bgColor'">Trainee</h1>
+<h1 [ngClass]="styleColor">Aris Global</h1>
+<h1 [ngClass]="styleColor==='font'?'bgColor':'changeColor'">Mysore</h1>
+
+<h1 style="color:red">Hi</h1>
+<h1 [ngStyle]="{'color':'yellow'}">Hello</h1>
+<h1 [ngStyle]="{'color':'textColor'}">Hello</h1>
+
+--------------------------------------------------------------------
+.changeColor{
+    color: red;
+}
+.bgcolor{
+    background-color: salmon;
+}
+.newfont{
+    color: lavender;
+}
