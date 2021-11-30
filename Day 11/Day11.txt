@@ -1,0 +1,117 @@
+app.component.html
+
+
+<h4>Form Example:</h4>
+<form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+<label for="StudentFName">Student First Name</label>
+<input type="text" id="StudentFName" name="StudentFName" [(ngModel)]="StudentFName" required minlength="3">
+<br>
+<br>
+<label for="StudentLName">Student Last Name</label>
+<input type="text" id="StudentLName" name="StudentLName" [(ngModel)]="StudentLName">
+<br>
+<br>
+<label for="StudentAgee">Student Age</label>
+<input type="text" id="StudentAgee" name="StudentAgee" [(ngModel)]="StudentAgee">
+<br>
+<br>
+<input type="checkbox" id="terms" name="terms" [(ngModel)]="terms" required>I accept the terms and conditions
+<br>
+<br>
+<button type="submit" [disabled]="!myForm.valid">Submit</button>
+<br>
+<br>
+<button (click)="resetForm(myForm)">Reset</button>
+</form>
+
+<br>
+
+
+
+.css
+/* .box{
+    display: flex;
+} */
+.changeColor{
+    color: hotpink;
+}
+.bgColor{
+    background-color: khaki;
+}
+.newfont{
+    color: lightseagreen;
+}
+
+
+
+
+
+navbar.componjent.html
+
+
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+
+@Component({
+  selector: 'app-nav-bar',
+  templateUrl: './nav-bar.component.html',
+  styleUrls: ['./nav-bar.component.css']
+})
+export class NavBarComponent implements OnInit {
+  myReactiveForm!: FormGroup;
+  constructor() { }
+
+  ngOnInit(): void {
+    this.myReactiveForm=new FormGroup({
+      'FirstNameOfCandidate': new FormControl(null),
+    'LastNameOfCandidate': new FormControl(null),
+    'EmailAdressOfCandidate': new FormControl(null),
+    'PanNumerOfCandidate':new FormControl(null)
+    })
+  }
+  onSubmit(){
+    console.log(this.myReactiveForm.value);
+  }
+
+}
+
+
+
+navBar.component.html
+
+
+<h4>Reactive Form Examples</h4>
+<div class="BigBox">
+<form [formGroup]="myReactiveForm" (ngSubmit)="onSubmit()">
+    <label for="FirstNameOfCandidate">First Name Of Candidate</label>
+    <input type="text" id="FirstNameOfCandidate"  placeholder="First Name Of Candidate" formControlName="FirstNameOfCandidate">
+    <br>
+    <label for="LastNameOfCandidate">Last Name Of Candidate</label>
+    <input type="text" id="LastNameOfCandidate" placeholder="Last Name Of Candidate" formControlName="LastNameOfCandidate">
+    <br>
+    <label for="EmailAdressOfCandidate">Email Adress Of Candidate</label>
+    <input type="text" id="EmailAdressOfCandidate" placeholder="Email Adress Of Candidate" formControlName="EmailAdressOfCandidate">
+    <br>
+    <!-- <small> "ngIf="!myReactiveForm.get('"EmailAdressOfCandidate').valid && !myReactiveForm.get('"EmailAdressOfCandidate').touched"</small> -->
+    <label for="PanNumerOfCandidate">Password Of Candidate</label>
+    <input type="text" id="PanNumerOfCandidate" placeholder="PanNumer Of Candidate" formControlName="PanNumerdOfCandidate">
+    <br>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+</div>
+
+
+
+navBar.component.css
+
+.BigBox
+{
+    width: 300px;
+    height: 250px;
+    color:white;
+    border: 5px solid lightslategray;
+    background-color:white;
+    border-radius: 10px;
+    padding: 20px;
+}
